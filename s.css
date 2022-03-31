@@ -1,0 +1,183 @@
+/* ÖVERGRIPANDE */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.sida {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+}
+
+
+/* LAYOUT */
+
+header {
+    display: flex;
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.meny {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.meny > ul > li  {
+    display: inline;
+    list-style: none;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.meny > ul > li > a {
+    font-size: 13px;
+}
+
+main {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+#tidigare #lista {
+
+    text-align: center;
+    margin-top: 30px;
+    list-style: none;
+
+}
+
+#lista > li {
+
+    margin-bottom: 8px;
+
+}
+
+#victory {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #999;
+
+}
+
+/* TYPOGRAFI */
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.titel {
+    font-size: 34px !important;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 36px;
+}
+
+.wins {
+    list-style: none;
+    position: relative;
+    top: 60px;
+    font-size: 18px;
+    font-style: normal;
+    width: 100%;
+}
+
+.wins li {
+    margin-top: 24px;
+}
+
+#dagens-input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.spara {
+    border: 1px solid #ccc;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+    margin: 14px 5px 14px 0px;
+    float: right;
+  }
+
+.spara:hover {
+    background: #fff;
+    text-decoration: underline;
+  }
+
+.tidigare-meny {
+
+    font-weight: 900;
+
+}
+
+section {
+
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#dag li {
+
+    list-style: none;
+    margin-top: 8px;
+
+}
+
+
+/* SKÄRMENS BREDD MER ÄN 700 PIXLAR */
+
+@media (min-width: 701px) {
+
+    .sida {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 25% auto 25%;
+        grid-template-rows: 10% 1fr 1fr;
+    }
+
+    header {
+        display: grid;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        background: #f8f8f8;
+    }
+
+    main {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .meny {
+        grid-column: 2/3;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .meny > ul > li  {
+        padding-right: 30px;
+        padding-left: 30px;
+}
+
+}
